@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Mix de Produção</title>
+
+<!-- PWA iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mix Produção">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<span>📱 Mix Produção - Suliany Castro</span>
+<button onclick="toggleTheme()">🌙</button>
+</header>
+
+<div class="container">
+
+<!-- CADASTRO -->
+<div class="card">
+<h3>➕ Nova Referência</h3>
+
+<label>Nome</label>
+<input id="refNome">
+
+<label>Minutos</label>
+<input type="number" inputmode="numeric" id="refMinutos">
+
+<label>Segundos (0–99)</label>
+<input type="number" inputmode="numeric" min="0" max="99" id="refSegundos">
+
+<button class="btn" onclick="salvarReferencia()">Salvar</button>
+</div>
+
+<!-- MIX -->
+<div class="card">
+<h3>📦 Mix do Dia</h3>
+
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Tempo</th>
+<th>Qtd</th>
+<th>Total (min)</th>
+<th></th>
+</tr>
+</thead>
+<tbody id="tabela"></tbody>
+</table>
+</div>
+
+<!-- CALCULO -->
+<div class="card">
+<h3>📊 Cálculo Geral</h3>
+
+<label>Pessoas trabalhando</label>
+<input type="number" inputmode="numeric" id="pessoas">
+
+<label>Minutos por pessoa</label>
+<input type="number" inputmode="numeric" id="minDia">
+
+<button class="btn" onclick="calcular()">Calcular</button>
+
+<p class="result" id="disp"></p>
+<p class="result" id="usado"></p>
+<p class="result" id="ef"></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
